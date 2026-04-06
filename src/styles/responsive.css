@@ -1,0 +1,101 @@
+/* ─── Tablet: ≤ 900px ────────────────────────────────────── */
+@media (max-width: 900px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card.full {
+    grid-column: 1;
+  }
+}
+
+/* ─── Mobile: ≤ 768px ────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Hide sidebar, show mobile nav */
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  /* Pad bottom so content clears mobile nav */
+  .shell {
+    padding-bottom: 64px;
+  }
+
+  .main {
+    padding: 20px 16px 32px;
+  }
+
+  /* 2-column stat grid */
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Topbar: hide role tag on small screens */
+  .rbac-tag {
+    display: none;
+  }
+
+  /* Page header stacks vertically */
+  .page-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Filter bar stacks vertically */
+  .filter-inputs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-input,
+  .filter-select {
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* Form rows become single column in modal */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Small mobile: ≤ 480px ──────────────────────────────── */
+@media (max-width: 480px) {
+  /* All grids go single column */
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  /* Topbar tighter padding */
+  .topbar {
+    padding: 0 14px;
+  }
+
+  /* Wordmark: hide text label on very small screens */
+  .wordmark-text {
+    display: none;
+  }
+
+  /* Modal edge-to-edge */
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  /* Table: reduce cell padding */
+  th,
+  td {
+    padding: 9px 11px;
+  }
+}
